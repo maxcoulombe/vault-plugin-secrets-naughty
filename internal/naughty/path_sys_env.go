@@ -34,7 +34,7 @@ func (b *naughtyBackend) handleEnvRead(_ context.Context, _ *logical.Request, da
 
 	value, exists := os.LookupEnv(name)
 	if !exists {
-		value = "FIXED"
+		value = "NOT_FOUND"
 	}
 
 	return &logical.Response{
